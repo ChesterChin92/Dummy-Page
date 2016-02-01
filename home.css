@@ -1,0 +1,47 @@
+.nav {
+  background: #212121;
+  width: auto;
+}
+.nav ul li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 15px 35px;
+  font-family: 'Cocogoose', sans-serif;
+  font-weight: 720;
+  text-transform: uppercase;
+  font-size: 14px;
+  position: relative;
+}
+.nav ul li a:hover {
+  color: #909090;
+}
+.nav ul li a:hover:before {
+  width: 100%;
+}
+.nav ul li a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background: #FF8A65;
+  position: relative;
+  transition: width .25s;
+  box-shadow: 2px 2px 1px black;
+}
+.nav ul li.last > a:after,
+.nav ul li:last-child > a:after {
+  display: none;
+}
+.nav ul li.active a {
+  color: #909090;
+}
+.nav ul li.active a:before {
+  width: 100%;
+}
