@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+
+    <link href="login.css" rel="stylesheet">
+
+<meta charset="utf-8">
+<title>Login Form</title>
+    <style>
+    body {
+    margin: 0 auto;
+    padding: 2em 2em 4em;
+    max-width: 800px;
+    font-family: "Cocogoose", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5em;
+    color: #545454;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.06);
+}
+    </style>
+</head>
+
+<body>
+<div class="login">
+     <div class="login-screen">
+          <div class="login-icon">
+            <img src="http://i.imgur.com/Cv6TqXK.png"/>
+          </div>
+         <div>
+<h1>LOGIN PAGE</h1>
+
+
+<form name="login" method="get" action="home.html">
+
+<label class="couture">Username: </label>
+<input type="text" name="username" placeholder="username" required>
+        <br><br>
+
+<label class="couture">Pin Numbers: </label>
+<input type="password" name="password" required pattern="(?=.*[0-9]).{6,}" placeholder="pin" required>
+<br><br>
+<label class="couture">&#9830 Enter 6 pin numbers &#9830</label>
+<br><br>
+
+
+<input type="checkbox" name="remember" id="remember">
+<label class="couture" for="remember">Remember Me</label>
+<br><br>
+
+</p>
+    <p>
+    <label class="couture">	<input type="submit" name="login" value="Login" button class="pure-button pure-button-primary pure-button-active pure-button hover"></button></label>
+        </p> 
+</form>
+</form>
+</body>
+</html>
