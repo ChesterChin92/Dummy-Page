@@ -5,9 +5,23 @@
 
    <title>Simple Home</title>
    <script>
-      function change(){
+      function change1(){
+         document.getElementById('link2').className += 'active';
+         document.getElementById('link1').className += 'disabled';
+		 document.getElementById('link3').className += 'disabled';
+		 document.getElementById('link4').className += 'disabled';
+      }
+	  	  function change2(){
          document.getElementById('link3').className += 'active';
-         console.log("Changed!");
+		 document.getElementById('link1').className += 'disabled';
+		 document.getElementById('link2').className += 'disabled';
+		 document.getElementById('link4').className += 'disabled';	 
+      }
+	  function change3(){
+         document.getElementById('link4').className += 'active';
+		 document.getElementById('link1').className += 'disabled';
+		 document.getElementById('link2').className += 'disabled';
+		 document.getElementById('link3').className += 'disabled';	 
       }
    </script>
 </head>
@@ -15,10 +29,10 @@
 
 <div class='nav'>
 <ul>
-   <li class='active' ><a href='#link'><span>Home</span></a></li>
-   <li id="link3" class='' ><a onclick="change()" href='#link'><span>About Us</span></a></li>
-   <li><a href='#link'><span>Info</span></a></li>
-   <li class='last'><a href='#link'><span>Contact Us</span></a></li>
+   <li id= "link1" class='active' ><a href='#link'><span>Home</span></a></li>
+   <li id="link2" class='' ><a onclick="change1()" href='#link'><span>About Us</span></a></li>
+   <li id="link3" class=''><a onclick="change2()" href='#link'><span>Info</span></a></li>
+   <li id="link4" class=''><a onclick="change3()" href='#link'><span>Contact Us</span></a></li>
 </ul>
 </div>
 
