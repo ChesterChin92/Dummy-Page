@@ -24,15 +24,27 @@
             }
         }	
 		
+ 	function change1(){
+         document.getElementById('2').className = 'active';
+         document.getElementById('1').className = 'disabled';
+		 document.getElementById('3').className = 'disabled';
+     }
+	 
+	  function change2(){
+         document.getElementById('3').className = 'active';
+         document.getElementById('2').className = 'disabled';
+		 document.getElementById('1').className = 'disabled';
+     }
+
    </script>
 </head>
 <body onload="hide('link1',['link2','link3'])">
 <body>
 <div class="nav">
-<ul id="nav">
-   <li id="home" class='active'><a onclick="hide('link1',['link2','link3'])" href='#'><span>Home</span></a></li>
-   <li id='abt'><a onclick="hide('link2',['link1','link3'])"; href='#'><span>About</span></a></li>
-   <li id="contact"><a onclick="hide('link3',['link1','link2'])" href='#'><span>Contact Us</span></a></li>
+<ul id="navbar">
+   <li id="1" class='active'><a onclick="hide('link1',['link2','link3'])" href='#'><span>Home</span></a></li>
+   <li id="2"><a onclick="hide('link2',['link1','link3']); change1();" href='#'><span>About</span></a></li>
+   <li id="3"><a onclick="hide('link3',['link1','link2']); change2();" href='#'><span>Contact Us</span></a></li>
 </ul>
 </div>
 
