@@ -11,9 +11,9 @@
 /*}*/
 
 .nav {
-  position: fixed;
-  top:0;
-  left:0;
+  /*position: fixed;*/
+  /*top:0;*/
+  /*left:0;*/
   background: #212121;
   width: 100%;
 }
@@ -65,15 +65,3 @@
 margin-top: 70px;
  }
  
- $(document).ready(function () {
-    $('.nav ul li a').click(function(e) {
-
-        $('.nav ul li').removeClass('active');
-
-        var $parent = $(this).parent();
-        if (!$parent.hasClass('active')) {
-            $parent.addClass('active');
-        }
-        e.preventDefault();
-    });
-});

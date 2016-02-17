@@ -4,25 +4,73 @@
 <head>
 	<title>Forum</title>
 	<link rel="stylesheet" href="./css/main.css">
+	<link href="home.css" rel="stylesheet">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<style>
 		.wrapper{
 			width:95%;
-			padding: 3em 0 3em 0;
+			/*padding: 10em 0 3em 0;*/
+			/*Edited this line to match nav bar*/
 			position: relative;
 			margin-left: auto;
 			margin-right: auto;
 		}
 	</style>
+
+	<script>
+		function $(id) {
+			return document.getElementById(id);
+		}
+
+		function ide(id, list) {
+			var elem = $(id); //get visible article
+			elem.style.visibility = "visible";
+			elem.style.position = "fixed"; // Making all text to appear at fix location
+			elem.style.position.left = "100px";
+			elem.style.position.top = "150px";
+
+			for (var i = 0; i < list.length; i++) {
+				//Itterate each element
+				var itm = $(list[i]);
+				itm.style.visibility = "hidden";
+
+			}
+		}
+
+		function status(id,list) {
+			var elem = $(id);
+			elem.className = 'active';
+
+			for (var i = 0; i < list.length; i++) {
+				var itm = $(list[i]);
+				itm.className = 'disabled';
+			}
+		}
+
+	</script>
 </head>
 
 <body>
+<div class="nav">
+	<ul id="navbar">
+		<li id="1" class='active'><a onclick="status('1',['2','3']);" href='#'><span>Home</span></a></li>
+		<li id="3"><a onclick="status('3',['1','2']);" href='#'><span>Events</span></a></li>
+		<li id="2"><a onclick="status('2',['1','3']);" href='#'><span>Forum</span></a></li>
+		<li id="4"><a onclick="status('3',['1','2']);" href='#'><span>Login</span></a></li>
+		<li id="5"><a onclick="status('3',['1','2']);" href='#'><span>Sign Up</span></a></li>
+	</ul>
+</div>
+
+
+
 	<div class="wrapper">
 		<!-- simple demo , later on will replace with php query data-->
+<!--		<span style="float:left;width:100%;height:100%;"><img style="float:left;width:100%;height:100%;>;"  src="./rock_image.jpg" /></span>-->
+
 
 		<!-- show event details -->
-		<div style="width:100%;height:80px;">
-			<span style="float:left;width:10%;height:15%;"><img src="./add3.png" /></span>
+		<div style="width: 400px;height:300px;display: inline-table">
+			<span style="float:left;width:100%;height:100%;"><img style="float:left;width:100%;height:100%;>;"  src="./rock_image.jpg" /></span>
 			<span style="float:left;width:100%;">Swee Yinn Rock concert</span>
 			<span style="float:left;width:100%;">Date: 4 - Jun - 2016</span>
 			<span style="float:left;width:100%;">Venue: Esplanade</span>
@@ -31,6 +79,7 @@
 
 		<?php
 			$check =2;
+
 			for($i=0; $i<=10; $i++)
 			{
 				echo '<div style="height:120px;width:100%;">';
