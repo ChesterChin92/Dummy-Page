@@ -218,4 +218,13 @@ a#openPopUp:hover {
   top: 2px;
   left: 2px;
 }
+
+.wrapper{
+  width:95%;
+  /*padding: 10em 0 3em 0;*/
+  /*Edited this line to match nav bar*/
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* end rating css */
